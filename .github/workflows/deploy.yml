@@ -13,7 +13,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: 迁出文件
-              uses: actions/checkout@v3
+              uses: actions/checkout@v4
 
             - name: 准备 Python
               uses: actions/setup-python@v4
@@ -30,7 +30,7 @@ jobs:
               run: pipenv install
 
             - name: 构建项目
-              run: pipenv build
+              run: pipenv run build
 
             - name: 上传构建结果
               uses: actions/upload-pages-artifact@v2
