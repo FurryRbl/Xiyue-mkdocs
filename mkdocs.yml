@@ -1,0 +1,70 @@
+# yaml-language-server: $schema=https://squidfunk.github.io/mkdocs-material/schema.json
+# yaml-language-server: $schema=https://guts.github.io/mkdocs-rss-plugin/schema.json
+site_name: 茜悦
+site_author: SharpIce 锐冰龙
+site_description: 茜悦 世界观 Wiki
+site_url: https://Xiyue.SharpIce.top
+site_dir: build/
+repo_name: 茜悦 > Github
+repo_url: https://github.com/FurryRbl/Xiyue
+copyright: 茜悦 © 2023 锐冰龙所有
+docs_dir: article/Wiki
+hooks:
+    - plugins/xiyue_markdown/plugins.py
+extra_css:
+    - css/Xiyue.css
+extra_javascript:
+    - path: js/Xiyue.js
+      async: true
+extra:
+    homepage: https://Xiyue.SharpIce.top
+    social:
+        - icon: fontawesome/brands/github
+          link: https:/github.com/FurryRbl
+        - icon: material/email
+          link: mailto:VupRbl@163.com
+watch:
+    - public/
+    - plugins/
+    - submodule/
+markdown_extensions:
+    - toc:
+          permalink: "#"
+          separator: "_"
+          baselevel: 6
+theme:
+    name: material
+    language: zh
+    font: false
+    custom_dir: public
+    logo: favicon.png
+    favicon: favicon.ico
+    icon:
+        repo: fontawesome/brands/github
+    features:
+        - search.share
+        - search.suggest
+        - search.highlight
+        - navigation.top
+    palette:
+        scheme: default
+        primary: white
+        accent: light blue
+plugins:
+    - with-pdf:
+          render_js: true
+          output_path: Xiyue.pdf
+          cover_subtitle: 茜悦 Wiki
+          cover_logo: /favicon.png
+    - rss:
+          match_path: .*
+          image: material/rss
+          abstract_chars_count: 180
+    - git-revision-date-localized:
+          type: datetime
+          enable_creation_date: true
+          fallback_to_build_date: true
+    - search:
+          jieba_dict: submodule/jieba/extra_dict/dict.txt.big
+          lang: en
+          separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'

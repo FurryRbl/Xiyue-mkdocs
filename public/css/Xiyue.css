@@ -1,0 +1,87 @@
+/* 设置字体 */
+* {
+	font-display: swap;
+	font-family: Roboto, "Noto Sans SC";
+}
+
+/* 设置字体 */
+
+/* 设置搜索框样式 */
+.md-search__form {
+	border-radius: 10px;
+}
+
+/* 设置搜索框样式 */
+
+/* 设置左栏动画 */
+.md-sidebar--primary * {
+	animation: primaryAnimation 1s;
+}
+
+@keyframes primaryAnimation {
+	0% {
+		opacity: 0;
+		transform: translateX(-1rem);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+/* 栏目选中效果 */
+.md-nav__link--active {
+	border-right: 4px solid var(--md-typeset-a-color);
+}
+
+/* 栏目选中效果 */
+
+/* 设置顶栏动画*/
+.md-header__inner {
+	animation: navAnimation 1s;
+}
+
+@keyframes navAnimation {
+	0% {
+		opacity: 0;
+		transform: translateY(-1rem);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+/* 设置左栏动画 */
+
+/* OverlayScrollbars 滚动条 */
+.os-scrollbar-handle {
+	border: unset !important;
+	box-shadow: 0px 0px 10px 5px rgba(79, 122, 255, 0.3);
+	background: linear-gradient(#00f2ff, #4f7aff) !important;
+}
+
+.os-scrollbar-handle:hover {
+	animation: OverlayScrollbarsAnimation 1s forwards;
+}
+
+@keyframes OverlayScrollbarsAnimation {
+	100% {
+		box-shadow: 0px 0px 10px 1px #aaa;
+	}
+}
+
+/* OverlayScrollbars 滚动条 */
+
+/* 图片样式 */
+.md-content .images {
+	text-align: center;
+}
+
+.md-content .images img {
+	border: 1px solid #eee;
+}
+
+/* 图片样式 */

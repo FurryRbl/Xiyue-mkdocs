@@ -1,0 +1,23 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[packages]
+black = "*"
+jieba = "*"
+mkdocs = "*"
+mkdocs-material = "*"
+mkdocs-rss-plugin = "*"
+mkdocs-git-revision-date-localized-plugin = "*"
+mkdocs-with-pdf = {editable =true, path="submodule/mkdocs-with-pdf"}
+
+[dev-packages]
+
+[requires]
+python_version = "3.11"
+
+[scripts]
+dev = "pipenv run mkdocs serve"
+build = "pipenv run mkdocs build"
+black = "black ."

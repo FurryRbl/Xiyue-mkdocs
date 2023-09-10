@@ -1,0 +1,8 @@
+[tool.black]
+target-version = ['py311']
+extend-exclude = '''
+/(
+  submodule |
+  node_modules
+)/
+'''
