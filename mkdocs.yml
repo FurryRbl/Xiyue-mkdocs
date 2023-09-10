@@ -51,11 +51,6 @@ theme:
         primary: white
         accent: light blue
 plugins:
-    - with-pdf:
-          render_js: true
-          output_path: Xiyue.pdf
-          cover_subtitle: 茜悦 Wiki
-          cover_logo: /favicon.png
     - rss:
           match_path: .*
           image: material/rss

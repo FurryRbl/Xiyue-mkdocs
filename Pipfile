@@ -10,7 +10,6 @@ mkdocs = "*"
 mkdocs-material = "*"
 mkdocs-rss-plugin = "*"
 mkdocs-git-revision-date-localized-plugin = "*"
-mkdocs-with-pdf = {editable =true, path="submodule/mkdocs-with-pdf"}
 
 [dev-packages]
 
