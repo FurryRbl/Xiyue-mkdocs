@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+<!-- head 标签 -->
+{% block extrahead %}
+
+<!-- Blog.css -->
+<link
+	rel="stylesheet"
+	href="https://npm.onmicrosoft.cn/@sharpice/blog.css@1.0.0/dist/Blog.css"
+/>
+
+<!-- Giscus 评论 -->
+<script
+	src="https://giscus.app/client.js"
+	data-repo="FurryRbl/Xiyue-Discussions"
+	data-repo-id="R_kgDOKKyB2A"
+	data-category="Comment"
+	data-category-id="DIC_kwDOKKyB2M4CY0mF"
+	data-mapping="url"
+	data-strict="0"
+	data-reactions-enabled="1"
+	data-emit-metadata="0"
+	data-input-position="bottom"
+	data-theme="light"
+	data-lang="zh-CN"
+	data-loading="lazy"
+	crossorigin="anonymous"
+	async
+></script>
+
+<!-- Google Fonts 字体 -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto" />
+<link
+	rel="stylesheet"
+	href="https://fonts.googleapis.com/css?family=Noto+Sans+SC"
+/>
+
+{% endblock %}
+
+<!-- 文章 -->
+
+{% block container %}
+<div class="md-content" data-md-component="content">
+	<article class="md-content__inner md-typeset blog-content">
+		{% block content %} {% include "partials/content.html" %} {% endblock %}
+	</article>
+	<h1 id="__comments">{{ lang.t("meta.comments") }}</h1>
+	<div class="giscus"></div>
+</div>
+{% endblock %}
+

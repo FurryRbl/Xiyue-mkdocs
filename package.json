@@ -1,0 +1,31 @@
+{
+	"name": "xiyue",
+	"version": "1.0.0",
+	"description": "茜悦 Wiki",
+	"type": "module",
+	"private": true,
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/FurryRbl/Xiyue.git"
+	},
+	"homepage": "https://Xiyue.SharpIce.top",
+	"bugs": {
+		"url": "https://github.com/FurryRbl/Xiyue/issues"
+	},
+	"author": {
+		"name": "SharpIce",
+		"email": "VupRbl@163.com",
+		"url": "https://SharpIce.top"
+	},
+	"engines": {
+		"node": ">=18"
+	},
+	"scripts": {
+		"pre": "prettier --write .",
+		"clean": "rimraf build"
+	},
+	"devDependencies": {
+		"prettier": "^3.0.3",
+		"rimraf": "^5.0.1"
+	}
+}
